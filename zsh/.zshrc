@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 alias ls="eza --tree -L 1 --icons -I .git --color=always"
-alias bcat="batcat"
+alias bat="batcat"
 
 export BAT_THEME="Catppuccin Mocha"
 export PATH="$PATH:/opt/neovim/bin"

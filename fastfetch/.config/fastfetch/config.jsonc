@@ -3,111 +3,145 @@
   "logo": {
     "type": "iterm",
     "source": "$HOME/.config/fastfetch/catimage.jpg",
-    "width": 30,
-    "height": 15,
+    "width": 45,
+    "height": 25,
     "padding": {
-      "top": 0,
-      "left": 2,
-      "right": 2,
-    }
-  },
-  "display": {
-    "separator": ": ",
-    "color": {
-      "keys": "blue",
-      "title": "red"
-    },
-    "key": {
-      "width": 12,
-      "type": "string"
-    },
-    "bar": {
-      "width": 10,
-      "char": {
-        "elapsed": "■",
-        "total": "-"
-      },
-    },
-    "percent": {
-      "type": 9,
-      "color": {
-        "green": "green",
-        "yellow": "light_yellow",
-        "red": "light_red"
-      }
+      "top": 2,
+      "left": 15,
+      "right": 10
     }
   },
 
-  "modules":[
-    {
-      "type": "custom",
-      "format": "\u001b[90m┌──────────────────────────────────────────────────┐"
-    },
-    {
-      "type": "title",
-      "format": "                    {user-name}@{host-name-colored}"
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[90m└──────────────────────────────────────────────────┘"
-    },
-    {
-      "type": "custom",
-      "format": "╭──────────────────────────────────────────────────╮"
-    },
-    {
-      "type": "os",
-      "key": "  OS",
-      "keyColor": "blue",
-      "format": "{name} {version}"
-    },
-    {
-      "type": "kernel",
-      "key": "  Kernel"
-    },
-    {
-      "format": "├──────────────────────────────────────────────────┤",
-      "type": "custom"
-    },
-    {
-      "type": "cpu",
-      "key": "  CPU",
-      "showPeCoreCount": true
-    },
-    {
-      "type": "memory",
-      "key": "  Memory",
-      "percent": {
-        "type": 3,
-        "green": 30,
-        "yellow": 70
-      }
-    },
-    {
-      "type": "shell",
-      "key": "  Shell",
-    },
-    {
-      "type": "terminal",
-      "key": "  Term"
-    },
-    {
-      "format": "├──────────────────────────────────────────────────┤",
-      "type": "custom"
-    },
-    {
-      "type": "uptime",
-      "key": "  Uptime",
-      "format": "{days} days {hours} hours {minutes} minutes"
-    },
-    {
-      "type": "localip",
-      "key": "  Local IP",
-      "compact": true
-    },
-    {
-      "type": "custom",
-      "format": "╰──────────────────────────────────────────────────╯"
-    }
-  ]
+  "modules": [
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
+        },
+        {
+            "type": "host",
+            "key": " PC",
+            "keyColor": "green"
+        },
+        {
+            "type": "cpu",
+            "key": "│ ├",
+            "keyColor": "green"
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├󰍛",
+            "keyColor": "green"
+        },
+        {
+            "type": "memory",
+            "key": "│ ├󰍛",
+            "keyColor": "green"
+        },
+        {
+            "type": "disk",
+            "key": "└ └",
+            "keyColor": "green"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
+        },
+        {
+            "type": "os",
+            "key": " OS",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "kernel",
+            "key": "│ ├",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "bios",
+            "key": "│ ├",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "packages",
+            "key": "│ ├󰏖",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "shell",
+            "key": "└ └",
+            "keyColor": "yellow"
+        },
+        "break",
+        {
+            "type": "de",
+            "key": " DE",
+            "keyColor": "blue"
+        },
+        {
+            "type": "lm",
+            "key": "│ ├",
+            "keyColor": "blue"
+        },
+        {
+            "type": "wm",
+            "key": "│ ├",
+            "keyColor": "blue"
+        },
+        {
+            "type": "wmtheme",
+            "key": "│ ├󰉼",
+            "keyColor": "blue"
+        },
+        {
+            "type": "terminal",
+            "key": "└ └",
+            "keyColor": "blue"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌────────────────────Uptime / Age / DT────────────────────┐"
+        },
+        {
+            "type": "command",
+            "key": "  OS Age ",
+            "keyColor": "magenta",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+        },
+        {
+            "type": "uptime",
+            "key": "  Uptime ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "datetime",
+            "key": "  DateTime ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└─────────────────────────────────────────────────────────┘"
+        },
+
+//        {
+//            "type": "colors"
+//        },
+
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        }
+ 
+    ]
 }

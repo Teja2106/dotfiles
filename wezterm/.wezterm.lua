@@ -31,12 +31,13 @@ config.keys = {
 config.use_fancy_tab_bar = true
 
 config.initial_cols = 172
-config.initial_rows = 48
+config.initial_rows = 24
 
 config.color_scheme = "AdventureTime"
-config.window_background_opacity = 0.87
+config.window_background_opacity = 0.75
+config.kde_window_background_blur = true
 
-config.window_decorations = "RESIZE"
+config.window_decorations = "NONE"
 config.font = wezterm.font("DepartureMono Nerd Font Mono")
 config.font_size = 13
 config.default_cursor_style = "SteadyUnderline"
